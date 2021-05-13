@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>MYDB Documentation</h3>
+    <i>Mydb was designed specifically for our purposes and is highly flexible (it is extremely easy to add features to mydb) and <br>extremely fast (about 10x faster than postgre for database size lesser than 4gb).</i>
+    <hr>
+    <div>
+        <h4>Add row to table</h4>
+        <i>Adding a row to a new table name creates a table</i>
+        <p>We make a post request to /insert/tablename. Here, tablename is the name of the table we want to insert in</p>
+        <p>Python request</p>
+        <code>requests.post(url+'insert/qwer', data = {'row' : json.dumps([1,2,'asdf'])})</code> 
+        <p>
+            Creates a table qwer if it doesnt exist and adds the row to it
+        </p>
+    </div>
+    <hr>
+    <div>
+        <h4>Get rows of a table</h4>
+        <p>We make a get request to /insert/tablename. Here, tablename is the name of the table we want to query</p>
+        <p>Python request</p>
+        <code>requests.get(url+'insert/qwer').content</code> 
+        <p>
+            this code returns <code>[["1", "4", "asdf"]]</code>
+        </p>
+    </div>
+    <hr>
+    <div>
+        <h4>Delete a table</h4>
+        <p>We make a delete request to /insert/tablename. Here, tablename is the name of the table we want to delete</p>
+        <i>Note: Delete makes the table blank, hence, we use use delete to create a new empty table</i>
+        <p>Python request</p>
+        <code>requests.delete(url+'query/qwer')</code> 
+        <p>
+            This code returns <code>[["1", "4", "asdf"]]</code>
+        </p>
+    </div>
+    <hr>
+    <h3>Thank You! :D</h3>
+    
+</body>
+</html>
